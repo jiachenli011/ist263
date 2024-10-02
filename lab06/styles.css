@@ -1,0 +1,19 @@
+body {
+    font-family: "Times New Roman"; 
+}
+
+h1, h2 {
+    color: #00BFFF;
+}
+
+.evenrow {
+    background-color: #9400D3;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
