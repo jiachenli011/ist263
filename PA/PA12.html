@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First JavaScript Programe</title>
+        <script>
+            function showAlert() {
+                alert('My first JavaScript program!');
+            }
+        </script>
+    </head>
+
+    <body onload = "helloworld();">
+        <a href="#" onmouseout="showAlert()">click for a message</a>
+        <p onclick="goodbyeworld()">click to show goodbye World</p>
+    </body>
+
+    <script>
+        function helloworld() {
+            alert('Hello World!');
+        }
+        function goodbyeworld() {
+            alert('Goodbye World!');
+        }
+    </script>
+</html>
