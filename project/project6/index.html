@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To Shanghai Travel Guide</title>
+    <title>Interactive Shanghai Travel Guide</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".interactive-image");
+            const displayTitle = document.querySelector("#image-title");
+            const displayText = document.querySelector("#image-text");
+
+            const content = [
+                {
+                    title: "The Bund - Modern View",
+                    text: "This page introduces visitors to the rich history and cultural background of Shanghai. By exploring the origins, historical events, cultural heritage, and notable figures of the city, readers will experience how Shanghai transformed from a small fishing village into a global metropolis."
+                },
+                {
+                    title: "The Bund - Historical View",
+                    text: "Shanghai’s early history dates back to the 7th century during the Tang Dynasty when it was a small fishing village primarily reliant on agriculture and fishing. Over time, Shanghai developed into a vital port city, especially during the Ming Dynasty, due to its advantageous location near the mouth of the Yangtze River."
+                },
+                {
+                    title: "Traditional Jiangnan Architecture",
+                    text: "Shanghai’s culture uniquely blends Chinese and Western elements. Traditional Jiangnan culture remains deeply rooted in the city, including the Wu dialect and Jiangnan garden architecture. Iconic Shikumen buildings reflect Shanghai’s history and are popular with tourists today."
+                },
+                {
+                    title: "Lu Xun - A Literary Giant",
+                    text: "Shanghai has been home to influential cultural and political figures. Lu Xun, a founder of modern Chinese literature, and architect László Hudec, known for the Peace Hotel and Park Hotel, have left their mark on the city."
+                },
+                {
+                    title: "Shanghai Classic Landmarks",
+                    text: "The Bund is Shanghai’s most famous historical landmark, showcasing Western-style architecture from the concession period. Another must-visit site is Yu Garden, a classical Chinese garden built in the Ming Dynasty, exemplifying Jiangnan garden artistry."
+                }
+            ];
+
+            images.forEach((img, index) => {
+                img.addEventListener("click", () => {
+                    images.forEach(image => image.classList.remove("active"));
+                    img.classList.add("active");
+                    displayTitle.textContent = content[index].title;
+                    displayText.textContent = content[index].text;
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -18,42 +57,20 @@
     </header>
 
     <main>
-        <section id="home">
-            <h1>Welcome to Shanghai</h1>
-            <img src="../images/Home page/Waitan-new.jpg" alt="The Bund - Modern View" class="full-width">
-            <p>This page introduces visitors to the rich history and cultural background of Shanghai. By exploring the origins, historical events, cultural heritage, and notable figures of the city, readers will experience how Shanghai transformed from a small fishing village into a global metropolis.</p>
-
-            <h2>Origins of Shanghai</h2>
-            <img src="../images/Home page/Waitan-old.jpg" alt="The Bund - Historical View" class="half-width">
-            <p>Shanghai’s early history dates back to the 7th century during the Tang Dynasty when it was a small fishing village primarily reliant on agriculture and fishing. Over time, Shanghai developed into a vital port city, especially during the Ming Dynasty, due to its advantageous location near the mouth of the Yangtze River. The name “Shanghai” means “City on the Sea,” reflecting its importance in maritime transport.</p>
-
-            <h2>Significant Historical Events</h2>
-            <div class="flex-container">
-                <img src="../images/Home page/一大.jpg" alt="Event 1" class="half-width">
-                <img src="../images/Home page/一大2.jpg" alt="Event 2" class="half-width">
+        <h1>Interactive Shanghai Travel Guide</h1>
+        
+        <section id="interactive-gallery">
+            <div class="gallery">
+                <img src="../images/Home page/Waitan-new.jpg" alt="The Bund - Modern View" class="interactive-image active">
+                <img src="../images/Home page/Waitan-old.jpg" alt="The Bund - Historical View" class="interactive-image">
+                <img src="../images/Home page/tradition_building.jpg" alt="Traditional Jiangnan Architecture" class="interactive-image">
+                <img src="../images/Home page/luxun.jpeg" alt="Lu Xun" class="interactive-image">
+                <img src="../images/Home page/SHclassic.png" alt="Shanghai Classic Landmarks" class="interactive-image">
             </div>
-            <p>The Opium War in the mid-19th century marked a turning point in Shanghai’s history. After the Treaty of Nanjing in 1842, Shanghai became an international metropolis. Rapid economic growth and cultural exchanges occurred, and by the 1920s and 1930s, Shanghai was known as the “Paris of the East.”</p>
-
-            <h2>Cultural Heritage</h2>
-            <img src="../images/Home page/tradition_building.jpg" alt="Traditional Jiangnan Architecture" class="half-width">
-            <p>Shanghai’s culture uniquely blends Chinese and Western elements. Traditional Jiangnan culture remains deeply rooted in the city, including the Wu dialect and Jiangnan garden architecture. Iconic Shikumen buildings reflect Shanghai’s history and are popular with tourists today.</p>
-
-            <h2>Notable Figures</h2>
-            <img src="../images/Home page/luxun.jpeg" alt="Lu Xun" class="small-width">
-            <p>Shanghai has been home to influential cultural and political figures. Lu Xun, a founder of modern Chinese literature, and architect László Hudec, known for the Peace Hotel and Park Hotel, have left their mark on the city.</p>
-
-            <h2>Historical Landmarks</h2>
-            <img src="../images/Home page/SHclassic.png" alt="Shanghai Classic Landmarks" class="half-width">
-            <p>The Bund is Shanghai’s most famous historical landmark, showcasing Western-style architecture from the concession period. Another must-visit site is Yu Garden, a classical Chinese garden built in the Ming Dynasty, exemplifying Jiangnan garden artistry.</p>
-        </section>
-
-        <section id="routes">
-            <h2>Recommended Routes</h2>
-            <ul>
-                <li>Cultural Classic One-Day Tour: The Bund, Yu Garden, City God Temple, and Tianzifang.</li>
-                <li>Nature and City Combo: Chongming Island and Lujiazui night view.</li>
-                <li>Two-Day History and Modernity: Day 1 - The Bund, Yu Garden, Tianzifang; Day 2 - Lujiazui and Binjiang Park.</li>
-            </ul>
+            <div id="display-content">
+                <h2 id="image-title">The Bund - Modern View</h2>
+                <p id="image-text">This page introduces visitors to the rich history and cultural background of Shanghai. By exploring the origins, historical events, cultural heritage, and notable figures of the city, readers will experience how Shanghai transformed from a small fishing village into a global metropolis.</p>
+            </div>
         </section>
     </main>
 
