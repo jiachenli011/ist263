@@ -1,41 +1,111 @@
 /* a. Body background color */
 body {
-    background-color: #95e4e2;
+    background-color: #f5f5f5; /* 浅灰色背景 */
 }
 
 /* b. Text color */
 body, p, span {
-    color: #008080;
+    color: #333333; /* 深灰色文字 */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* c. Link color */
 a {
-    color: #b3cde0;
+    color: #1a73e8; /* 深蓝色链接 */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* d. Heading color */
 h1, h2 {
-    color: #6497b1;
+    color: #ff7043; /* 橙色标题 */
 }
 
 /* e/11/12. Site Navigation Background */
 nav {
-    background-color: #005b96;
+    background-color: #003366; /* 深蓝色导航栏背景 */
     padding: 10px;
     margin-bottom: 30px;
 }
 
 /* f/10. Site Navigation Highlight Color */
 nav a:hover {
-    background-color: #03396c;
+    background-color: #00509e; /* 浅蓝色导航高亮 */
 }
 
 /* g/9. Site Navigation Link Color */
 nav a {
-    color: #011f4b;
+    color: #ffffff; /* 白色导航链接 */
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
+/* Table alternating row background */
 .evenrow {
-    background-color: #9400D3;
+    background-color: #e1f5fe; /* 浅蓝色偶数行背景 */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+table th {
+    background-color: #003366; /* 深蓝色表头背景 */
+    color: #ffffff; /* 白色表头文字 */
+}
+
+/* Form Section */
+form {
+    background-color: #ffffff; /* 表单白色背景 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #ff7043; /* 按钮橙色背景 */
+    color: #ffffff; /* 按钮白色文字 */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #d84315; /* 按钮悬停深橙色 */
+}
+
+/* Skills Image Section */
+.skillsimage img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
 }
