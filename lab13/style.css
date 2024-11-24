@@ -1,0 +1,41 @@
+/* a. Body background color */
+body {
+    background-color: #95e4e2;
+}
+
+/* b. Text color */
+body, p, span {
+    color: #008080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* c. Link color */
+a {
+    color: #b3cde0;
+}
+
+/* d. Heading color */
+h1, h2 {
+    color: #6497b1;
+}
+
+/* e/11/12. Site Navigation Background */
+nav {
+    background-color: #005b96;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+/* f/10. Site Navigation Highlight Color */
+nav a:hover {
+    background-color: #03396c;
+}
+
+/* g/9. Site Navigation Link Color */
+nav a {
+    color: #011f4b;
+}
+
+.evenrow {
+    background-color: #9400D3;
+}
