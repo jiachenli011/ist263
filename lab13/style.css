@@ -28,14 +28,14 @@ h1, h2 {
 
 /* e/11/12. Site Navigation Background */
 nav {
-    background-color: #00274D; /* 深蓝色导航栏背景 */
+    background-color: #001f3f; /* 更深的蓝色导航栏背景 */
     padding: 10px;
     margin-bottom: 30px;
 }
 
 /* f/10. Site Navigation Highlight Color */
 nav a:hover {
-    background-color: #003366; /* 深蓝色导航高亮 */
+    background-color: #000d1a; /* 接近黑色的悬停背景 */
 }
 
 /* g/9. Site Navigation Link Color */
@@ -45,6 +45,7 @@ nav a {
     margin: 0 5px;
     font-weight: bold; /* 加粗导航链接 */
     border-radius: 5px;
+    text-decoration: none;
 }
 
 /* Table alternating row background */
