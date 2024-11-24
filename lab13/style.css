@@ -21,7 +21,8 @@ a:hover {
 
 /* d. Heading color */
 h1, h2 {
-    color: #ff7043; /* 橙色标题 */
+    color: #e65100; /* 深橙色标题 */
+    font-weight: bold;
 }
 
 /* e/11/12. Site Navigation Background */
@@ -41,6 +42,7 @@ nav a {
     color: #ffffff; /* 白色导航链接 */
     padding: 5px 10px;
     margin: 0 5px;
+    font-weight: bold; /* 加粗导航链接 */
     border-radius: 5px;
 }
 
@@ -90,11 +92,12 @@ form input, form textarea, form select {
 }
 
 form input[type="submit"] {
-    background-color: #ff7043; /* 按钮橙色背景 */
+    background-color: #bf360c; /* 深橙色按钮背景 */
     color: #ffffff; /* 按钮白色文字 */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 form input[type="submit"]:hover {
