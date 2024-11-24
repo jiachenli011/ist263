@@ -1,6 +1,6 @@
 /* a. Body background color */
 body {
-    background-color: #97e5a9; /* 浅灰色背景 */
+    background-color: #f5f5f5; /* 浅灰色背景 */
 }
 
 /* b. Text color */
@@ -11,35 +11,36 @@ body, p, span {
 
 /* c. Link color */
 a {
-    color: #8d04e8; /* 深蓝色链接 */
+    color: #0044cc; /* 深蓝色链接，确保对比 */
     text-decoration: none;
 }
 
 a:hover {
+    color: #0033aa; /* 链接悬停状态加深颜色 */
     text-decoration: underline;
 }
 
 /* d. Heading color */
 h1, h2 {
-    color: #e65100; /* 深橙色标题 */
+    color: #5D4037; /* 深棕色标题 */
     font-weight: bold;
 }
 
 /* e/11/12. Site Navigation Background */
 nav {
-    background-color: #003366; /* 深蓝色导航栏背景 */
+    background-color: #00274D; /* 深蓝色导航栏背景 */
     padding: 10px;
     margin-bottom: 30px;
 }
 
 /* f/10. Site Navigation Highlight Color */
 nav a:hover {
-    background-color: #d23ee0; /* 浅蓝色导航高亮 */
+    background-color: #003366; /* 深蓝色导航高亮 */
 }
 
 /* g/9. Site Navigation Link Color */
 nav a {
-    color: #ffffff; /* 白色导航链接 */
+    color: #FFFFFF; /* 白色导航链接 */
     padding: 5px 10px;
     margin: 0 5px;
     font-weight: bold; /* 加粗导航链接 */
@@ -92,7 +93,7 @@ form input, form textarea, form select {
 }
 
 form input[type="submit"] {
-    background-color: #bf360c; /* 深橙色按钮背景 */
+    background-color: #BF360C; /* 深橙色按钮背景 */
     color: #ffffff; /* 按钮白色文字 */
     border: none;
     padding: 10px 20px;
@@ -101,7 +102,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #d84315; /* 按钮悬停深橙色 */
+    background-color: #D84315; /* 按钮悬停深橙色 */
 }
 
 /* Skills Image Section */
