@@ -28,7 +28,7 @@ h1, h2 {
 
 /* e/11/12. Site Navigation Background */
 nav {
-    background-color: #001f3f; /* 更深的蓝色导航栏背景 */
+    background-color: #00274D; /* 深蓝色导航栏背景 */
     padding: 10px;
     margin-bottom: 30px;
 }
@@ -46,6 +46,13 @@ nav a {
     font-weight: bold; /* 加粗导航链接 */
     border-radius: 5px;
     text-decoration: none;
+}
+
+/* h. Navigation Separator Color */
+nav span {
+    color: #FFFFFF; /* 白色分隔符 */
+    margin: 0 5px;
+    font-weight: bold;
 }
 
 /* Table alternating row background */
