@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Noto Sans SC', 'Edu AU VIC WA NT Pre', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #b22222;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-around; /* 图标和文字均匀分布 */
+    align-items: center; /* 垂直方向居中对齐 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: flex; /* 每个导航项使用 Flexbox */
+    align-items: center; /* 图标和文字在同一水平线上 */
+}
+
+nav a {
+    display: flex;
+    flex-direction: column; /* 图标在文字上方 */
+    align-items: center; /* 水平方向居中 */
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: #8b0000;
+}
+
+/* Hero Banner */
+.hero-banner {
+    padding: 2rem;
+    background: url('../images/Home_page/shanghai-banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+}
+
+/* Main Sections */
+main {
+    padding: 2rem;
+    background: #fff;
+}
+
+.intro, .routes, .food, .events {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #b22222;
+    margin-bottom: 1rem;
+}
+
+/* Interactive Gallery */
+.gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.interactive-image {
+    width: 200px;
+    border-radius: 10px;
+    opacity: 0.7;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.interactive-image:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Routes */
+.route-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center; /* 水平方向居中 */
+    padding: 1rem 0; /* 添加上下间距 */
+    background-color: #b22222;
+    color: white;
+}
+
+footer p {
+    margin: 0; /* 清除默认的外边距，避免不必要的偏移 */
+    font-size: 0.9rem; /* 根据屏幕大小适配字体大小 */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: row; /* 确保图标水平排列 */
+        justify-content: space-around; /* 图标和文字保持均匀分布 */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* 在手机屏幕上调整字体大小 */
+    }
+}
