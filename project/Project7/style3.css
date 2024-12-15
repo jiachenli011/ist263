@@ -129,14 +129,70 @@ footer p {
     font-size: 0.9rem; /* 根据屏幕大小适配字体大小 */
 }
 
-/* Responsive Design */
+/* 手机端和小屏幕优化样式 */
+@media screen and (max-width: 768px) {
+    /* 导航栏优化：垂直堆叠 */
+    .navbar ul {
+        flex-direction: column; /* 垂直堆叠 */
+        align-items: center; /* 居中显示 */
+    }
+
+    .navbar li {
+        margin: 0.5rem 0; /* 增加上下间距 */
+    }
+
+    .navbar a {
+        font-size: 1rem; /* 调整字体大小 */
+    }
+
+    /* 内容区域：垂直堆叠 */
+    .content {
+        flex-direction: column; /* 改为垂直堆叠 */
+        padding: 1rem; /* 调整内边距 */
+    }
+
+    .sidebar,
+    .attractions {
+        width: 100%; /* 占满整个屏幕宽度 */
+    }
+
+    .attraction-card img {
+        height: auto; /* 图片自动调整高度，保持比例 */
+    }
+
+    /* 网格布局：单列显示 */
+    .food-grid,
+    .attractions {
+        grid-template-columns: 1fr; /* 单列布局 */
+        gap: 1rem; /* 调整间距 */
+    }
+}
+
+/* 平板端优化：两列显示 */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .food-grid,
+    .attractions {
+        grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    }
+}
+
+/* 超小屏幕（480px以下）：字体和间距优化 */
 @media screen and (max-width: 480px) {
-    nav ul {
-        flex-direction: row; /* 确保图标水平排列 */
-        justify-content: space-around; /* 图标和文字保持均匀分布 */
+    body {
+        font-size: 14px; /* 字体整体缩小 */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* 标题字体缩小 */
+    }
+
+    .attraction-card h3,
+    .food-card h3 {
+        font-size: 1.2rem; /* 卡片标题字体缩小 */
     }
 
     footer p {
-        font-size: 0.8rem; /* 在手机屏幕上调整字体大小 */
+        font-size: 0.8rem; /* 页脚字体缩小 */
+        text-align: center; /* 居中显示 */
     }
 }
