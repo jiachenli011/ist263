@@ -1,99 +1,160 @@
-/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff5f5;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
 }
 
 .header {
-    background: #b22222;
+    background-color: #b22222;
     color: white;
-    padding: 1.5rem 0;
     text-align: center;
+    padding: 1.5rem 1rem;
 }
 
-.navbar {
-    background: #a02020;
-    padding: 0.5rem 0;
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
+/* Navigation Bar */
+/* 导航栏样式 */
 .navbar ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .navbar li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.navbar a.active, .navbar a:hover {
-    background: #8b0000;
+.navbar a i {
+    font-size: 1.5rem; /* 图标大小 */
+    margin-bottom: 0.5rem;
 }
 
-h1, h2 {
+.navbar a:hover,
+.navbar a.active {
+    color: #ffcccb; /* 鼠标悬停或激活时的颜色 */
+}
+
+/* Main Content Layout */
+.content {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.sidebar h3 {
+    color: #b22222;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 0.5rem 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
     color: #b22222;
 }
 
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 2rem 0;
+/* Attractions Section */
+.attractions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 80%;
 }
 
-.card {
+.attraction-card {
     background: white;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
-    width: calc(33.333% - 1rem);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
-.card img {
+.attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card h3 {
+.attraction-card h3 {
     margin: 1rem;
     color: #b22222;
-}
-
-.card p {
-    margin: 0 1rem 1rem;
-    color: #666;
-}
-
-.tips ul {
-    list-style: disc inside;
-    margin: 1rem 0;
-    padding: 0;
-}
-
-footer {
+    font-size: 1.5rem;
     text-align: center;
-    background: #a02020;
+}
+
+.attraction-card p {
+    margin: 0 1rem 1.5rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center; /* 水平方向居中 */
+    padding: 1rem 0; /* 添加上下间距 */
+    background-color: #b22222;
     color: white;
-    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0; /* 清除默认的外边距，避免不必要的偏移 */
+    font-size: 0.9rem; /* 根据屏幕大小适配字体大小 */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: row; /* 确保图标水平排列 */
+        justify-content: space-around; /* 图标和文字保持均匀分布 */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* 在手机屏幕上调整字体大小 */
+    }
 }
