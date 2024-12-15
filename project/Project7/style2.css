@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: #b22222;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.navbar {
+    background: #a02020;
+    padding: 0.5rem 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar a.active, .navbar a:hover {
+    background: #8b0000;
+}
+
+h1, h2 {
+    color: #b22222;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin: 1rem;
+    color: #b22222;
+}
+
+.card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+.tips ul {
+    list-style: disc inside;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    background: #a02020;
+    color: white;
+    padding: 1rem 0;
+}

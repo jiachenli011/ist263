@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Shanghai Travel Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".interactive-image");
+            const displayTitle = document.querySelector("#image-title");
+            const displayText = document.querySelector("#image-text");
+
+            const content = [
+                {
+                    title: "The Bund - Modern View",
+                    text: "The Bund is a vibrant representation of Shanghai’s modernity, offering a striking view of the futuristic Pudong skyline. Skyscrapers such as the iconic Oriental Pearl Tower and the Shanghai Tower stand tall across the Huangpu River, symbolizing the city’s rapid economic growth. At night, the illuminated buildings create a dazzling display, making it a favorite spot for photography and leisure walks. The riverside promenade attracts locals and tourists alike, offering space to relax and take in the city’s dynamic energy. This modern aspect of the Bund underscores Shanghai’s position as a global financial hub."
+                },
+                {
+                    title: "The Bund - Historical View",
+                    text: "Historically, the Bund embodies Shanghai’s colonial past, with its row of magnificent buildings showcasing Western architectural styles from the 19th and early 20th centuries. These structures were home to foreign banks, consulates, and trading companies, forming a hub for international commerce. Walking along the Bund, one can admire architectural gems like the Customs House and the HSBC Building, each telling stories of Shanghai’s cosmopolitan history. This historical charm contrasts beautifully with the modern skyline, symbolizing the city’s unique blend of heritage and innovation."
+                },
+                {
+                    title: "Traditional Jiangnan Architecture",
+                    text: "Traditional Jiangnan architecture reflects the essence of ancient Chinese culture, characterized by whitewashed walls, black-tiled roofs, and serene courtyards. In Shanghai, places like the Yuyuan Garden showcase this timeless style. Built during the Ming Dynasty, Yuyuan Garden is an exquisite example of meticulous design, featuring ornate pavilions, winding corridors, and tranquil ponds filled with koi fish. The balance of natural elements and human craftsmanship creates a harmonious environment, offering a glimpse into the elegant lifestyle of Jiangnan’s past."
+                },
+                {
+                    title: "Lu Xun - A Literary Giant",
+                    text: "Lu Xun, one of China’s most influential writers, is celebrated for his profound impact on modern Chinese literature. His former residence and memorial hall in Shanghai are popular cultural attractions. Known for his sharp critiques of society, Lu Xun’s works like The True Story of Ah Q remain deeply influential. The memorial hall showcases manuscripts, photos, and personal belongings, providing insights into his life and ideas. Visiting this site offers a meaningful connection to Lu Xun’s legacy and his enduring influence on Chinese thought and culture."
+                },
+                {
+                    title: "Shanghai Classic Landmarks",
+                    text: "Shanghai boasts a variety of classic landmarks that capture its rich history and vibrant culture. The Jade Buddha Temple, with its stunning jade statues, represents the city’s spiritual heritage. The Former French Concession enchants visitors with its tree-lined streets and European-style villas, evoking Shanghai’s colonial era. Nanjing Road, one of the world’s busiest shopping streets, showcases the city’s bustling energy. These landmarks reflect the multifaceted identity of Shanghai, blending the traditional, colonial, and contemporary into a unique urban experience."
+                }
+            ];
+
+            images.forEach((img, index) => {
+                img.addEventListener("click", () => {
+                    images.forEach(image => image.classList.remove("active"));
+                    img.classList.add("active");
+                    displayTitle.textContent = content[index].title;
+                    displayText.textContent = content[index].text;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="food.html"><i class="fas fa-utensils"></i> Cuisine</a></li>
+                <li><a href="attractions.html"><i class="fas fa-map-marker-alt"></i> Attractions</a></li>
+                <!--<li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li> -->
+            </ul>
+        </nav>
+        <div class="hero-banner">
+            <h1>Welcome to Shanghai</h1>
+            <p>Discover the perfect blend of modernity and tradition in this vibrant city.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>About Shanghai</h2>
+            <p>Shanghai, China's largest city, is known for its dazzling skyline, historical landmarks, and rich cultural heritage. From traditional Jiangnan architecture to futuristic skyscrapers, Shanghai offers something for everyone.</p>
+        </section>
+
+        <!-- Interactive Gallery Section -->
+        <section id="interactive-gallery">
+            <h2>Explore Shanghai</h2>
+            <div class="gallery">
+                <img src="../images/Home_page/Waitan-new.jpg" alt="The Bund - Modern View" class="interactive-image active">
+                <img src="../images/Home_page/Waitan-old.jpg" alt="The Bund - Historical View" class="interactive-image">
+                <img src="../images/Home_page/tradition_building.jpg" alt="Traditional Jiangnan Architecture" class="interactive-image">
+                <img src="../images/Home_page/luxun.jpeg" alt="Lu Xun" class="interactive-image">
+                <img src="../images/Home_page/SHclassic.png" alt="Shanghai Classic Landmarks" class="interactive-image">
+            </div>
+            <div id="display-content">
+                <h3 id="image-title">The Bund - Modern View</h3>
+                <p id="image-text">Explore Shanghai’s modern transformation with a visit to the iconic Bund. A perfect spot to enjoy the vibrant skyline at night.</p>
+            </div>
+        </section>
+
+        <!-- Recommended Routes Section -->
+        <section class="routes">
+            <h2>Recommended Routes</h2>
+            <div class="route-card">
+                <h3>Historical Tour</h3>
+                <p>Visit Yu Garden, the Bund, and the French Concession for a glimpse of Shanghai’s historical charm.</p>
+            </div>
+            <div class="route-card">
+                <h3>Modern Skyline Tour</h3>
+                <p>Explore Lujiazui, Shanghai Tower, and Oriental Pearl Tower for breathtaking views of the city.</p>
+            </div>
+        </section>
+
+        <!-- Food Section -->
+        <section class="food">
+            <h2>Shanghai Cuisine</h2>
+            <p>Savor local delicacies such as Xiaolongbao (soup dumplings), Shengjianbao (pan-fried buns), and more at traditional markets and renowned restaurants.</p>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Shanghai Film Festival - June 2024</li>
+                <li>Mid-Autumn Lantern Festival - September 2024</li>
+                <li>Shanghai Marathon - November 2024</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Interactive Shanghai Travel Guide. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
